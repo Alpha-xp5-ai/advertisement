@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Ads - Chartboost Integration | Documentation</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:960px;margin:0 auto;padding:20px 24px;color:#1a1a1a;line-height:1.6}
+h1{color:#0d1117;border-bottom:4px solid #e94560;padding-bottom:12px;font-size:2em}
+h2{color:#0d1117;border-bottom:2px solid #e94560;padding-bottom:6px;margin-top:48px;font-size:1.4em}
+h3{color:#16213e;margin-top:28px;font-size:1.1em}
+code{background:#f0f0f0;padding:2px 7px;border-radius:4px;font-family:'SFMono-Regular',Consolas,monospace;font-size:.9em}
+pre{background:#0d1117;color:#c9d1d9;padding:20px;border-radius:8px;overflow-x:auto;font-family:'SFMono-Regular',Consolas,monospace;font-size:.88em;line-height:1.7}
+pre code{background:transparent;padding:0;color:inherit}
+table{border-collapse:collapse;width:100%;margin:16px 0}
+th{background:#16213e;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+td{border:1px solid #ddd;padding:9px 14px}
+tr:nth-child(even) td{background:#f9f9f9}
+.badge{display:inline-block;background:#e94560;color:#fff;padding:3px 12px;border-radius:14px;font-size:.82em;margin-right:6px;font-weight:600}
+.badge.green{background:#2ea44f}
+.badge.blue{background:#0969da}
+.note{background:#fff8e1;border-left:5px solid #f9a825;padding:14px 18px;margin:20px 0;border-radius:0 8px 8px 0}
+.warn{background:#fff3e0;border-left:5px solid #e94560;padding:14px 18px;margin:20px 0;border-radius:0 8px 8px 0}
+.tech-table td:first-child{font-weight:600;width:38%;background:#f5f5f5}
+.step{background:#f8f9fa;border:1px solid #ddd;border-radius:8px;padding:16px 20px;margin:12px 0}
+.step-num{display:inline-block;background:#e94560;color:#fff;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:.85em;font-weight:700;margin-right:10px}
+ul{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+footer{margin-top:72px;padding-top:20px;border-top:2px solid #eee;color:#888;font-size:.88em}
+a{color:#0969da}
+dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0;padding-left:16px;color:#333}
+</style>
+</head>
+<body>
+
+<h1>Alpha Ads - Chartboost Integration</h1>
+<p><span class='badge'>UE5.7</span><span class='badge blue'>Android</span><span class='badge green'>Blueprint Ready</span><span class='badge'>v1.0</span></p>
+
+<h2>Overview</h2>
+<p>Alpha Ads - Chartboost Integration is an Unreal Engine 5.7 plugin that provides full Blueprint access to <strong>rewarded video, banner, interstitial, native, and app open ads</strong> on Android (arm64).</p><p>The plugin acts as an integration bridge to the <strong>Chartboost Android SDK v9.7.0</strong> by Chartboost Inc., delivered via Gradle/Maven. No C++ knowledge is required to use this plugin.</p>
+
+
+<h2>Screenshots</h2>
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin:16px 0">
+  <figure style="margin:0;flex:1;min-width:260px">
+    <img src="Mobile.png" alt="Mobile screenshot" style="width:100%;border-radius:8px;border:1px solid #ddd">
+    <figcaption style="text-align:center;color:#666;font-size:.88em;margin-top:6px">Mobile (Android)</figcaption>
+  </figure>
+  <figure style="margin:0;flex:1;min-width:260px">
+    <img src="Desktop.png" alt="Desktop / Editor screenshot" style="width:100%;border-radius:8px;border:1px solid #ddd">
+    <figcaption style="text-align:center;color:#666;font-size:.88em;margin-top:6px">Desktop / Editor Preview</figcaption>
+  </figure>
+</div>
+
+
+<h2>Features</h2>
+<ul>
+  <li>Rewarded Video with Location parameter, cached, failed-to-load, closed, and completed callbacks</li>
+  <li>Completed Rewarded Video callback delivers Location string and Reward integer</li>
+  <li>Banner Ads with position control, show, hide, and destroy</li>
+  <li>Interstitial Ads with loaded, failed, shown, closed, and clicked callbacks</li>
+  <li>Native Ad loading with loaded and failed callbacks</li>
+  <li>App Open Ads with full lifecycle events</li>
+  <li>Ad Impression tracking delegate</li>
+  <li>Game Instance Subsystem for global access</li>
+  <li>Blueprint Function Library and Actor Component</li>
+</ul>
+
+<h2>Technical Details</h2>
+<p>Use the table below when completing the <strong>Technical Details</strong> section on the Fab product submission page.</p>
+<table class='tech-table'>
+<tr><td>Features</td><td>See Features section above</td></tr>
+<tr><td>Code Modules</td><td>Chartboost (Runtime)</td></tr>
+<tr><td>Number of Blueprints</td><td>26</td></tr>
+<tr><td>Number of C++ Classes</td><td>5</td></tr>
+<tr><td>Network Replicated</td><td>No</td></tr>
+<tr><td>Supported Development Platforms</td><td>Windows: Yes &nbsp; Mac: Yes &nbsp; Linux: Yes</td></tr>
+<tr><td>Supported Target Build Platforms</td><td>Android (arm64)</td></tr>
+<tr><td>Documentation Link</td><td>See this page and README.md included in the plugin folder</td></tr>
+<tr><td>Example Project</td><td>Contact the author via the Fab product page</td></tr>
+<tr><td>Important Notes</td><td>Requires a real Android device for testing. Emulators are not supported by ad SDKs.</td></tr>
+</table>
+
+
+<h2>SDK Upgrade History</h2>
+<table>
+<tr><th>Plugin</th><th>Previous SDK</th><th>Current SDK</th><th>Delivery</th></tr>
+<tr><td>Chartboost</td><td>v6.6.0 (.jar)</td><td>v9.7.0</td><td>Gradle/Maven</td></tr>
+</table>
+
+<h2>Third-Party SDK</h2>
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>SDK Name</td><td>Chartboost Android SDK v9.7.0</td></tr>
+<tr><td>Provider</td><td>Chartboost Inc.</td></tr>
+<tr><td>License</td><td>Chartboost SDK License Agreement</td></tr>
+<tr><td>SDK Delivery</td><td>Gradle dependency: <code>com.chartboost:chartboost-sdk:9.7.0</code></td></tr>
+</table>
+<div class="note">
+  This plugin pulls the <strong>Chartboost SDK v9.7.0</strong> via Gradle at build time. You must independently accept the Chartboost terms of service and register your own account and App ID at the vendor website before ads will serve.
+</div>
+
+
+<h2>Setup Guide</h2>
+
+<div class="step"><span class="step-num">1</span><strong>Copy the plugin</strong> — Place the plugin folder inside your project's <code>Plugins/</code> directory.</div>
+<div class="step"><span class="step-num">2</span><strong>Enable the plugin</strong> — Open the editor, go to <strong>Edit &gt; Plugins</strong>, search for <em>Alpha Ads - Chartboost Integration</em>, and enable it. Restart the editor.</div>
+<div class="step"><span class="step-num">3</span><strong>Configure credentials</strong> — Go to <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong> and enter your SDK App ID and Zone/Placement IDs.</div>
+<div class="step"><span class="step-num">4</span><strong>Package for Android</strong> — Build the project and package it for Android Shipping.</div>
+
+
+<h2>Blueprint Usage Guide</h2>
+<p>All plugin functionality is available from Blueprint. Below is a step-by-step walkthrough of the most common use cases.</p>
+
+
+<h3>Accessing the Plugin (Subsystem)</h3>
+<p>This plugin provides a <strong>Game Instance Subsystem</strong> for easy global access. Get it from any Blueprint:</p>
+<pre><code>Get Game Instance
+  → Get Chartboost Subsystem
+  → [call any function]</code></pre>
+<div class="note">The Subsystem is automatically initialized when the game starts. You do not need to create it manually.</div>
+
+
+
+<h3>Rewarded Video / Primary Feature - Step by Step</h3>
+<pre><code>Event BeginPlay
+  ↓
+Get Chartboost Subsystem
+  ↓
+Bind Event to On Cached Rewarded Video
+  ↓
+Cache Rewarded Video
+
+─── On On Cached Rewarded Video ─────────────────────
+  ↓
+Show Rewarded Video</code></pre>
+
+
+
+<h3>Event Delegates Reference</h3>
+<p>Bind to these events <strong>before</strong> calling load/show functions:</p>
+<table>
+<tr><th>Event</th><th>When it fires</th></tr>
+<tr><td><code>On Cached Rewarded Video</code></td><td>Ad/content successfully loaded and ready to show</td></tr>
+<tr><td><code>On Failed To Load Rewarded Video</code></td><td>Load or show failed (String parameter contains error info)</td></tr>
+</table>
+<div class="warn"><strong>Important:</strong> Always bind your events <em>before</em> calling Load or Show functions, or you may miss callbacks.</div>
+
+
+<h3>Additional Blueprint Calls</h3><table><tr><th>Node</th><th>Description</th></tr>
+<tr><td><code>Load Banner</code></td><td>Load and cache Banner Ad</td></tr>
+<tr><td><code>Show Banner</code></td><td>Show Banner at position</td></tr>
+<tr><td><code>Load Interstitial</code></td><td>Cache Interstitial Ad</td></tr>
+<tr><td><code>Show Interstitial</code></td><td>Show Interstitial Ad</td></tr>
+</table>
+
+<h3>Project Settings</h3>
+<p>All SDK credentials are configured in <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong>. Fill in the following fields before packaging:</p>
+<ul>
+  <li><strong>App ID / SDK Key</strong> — Your application identifier from the Chartboost dashboard.</li>
+  <li><strong>Zone ID / Placement ID</strong> — The specific ad zone or placement for each ad format.</li>
+</ul>
+<div class="note">All Project Settings fields are read at app startup and injected into the Android manifest automatically by the plugin's UPL (Unreal Plugin Language) XML file.</div>
+
+<h2>Requirements</h2>
+<table>
+<tr><th>Requirement</th><th>Value</th></tr>
+<tr><td>Unreal Engine Version</td><td>5.7</td></tr>
+<tr><td>Target Platform</td><td>Android (arm64)</td></tr>
+<tr><td>Min Android SDK</td><td>API 26 (Android 8)</td></tr>
+<tr><td>Target Android SDK</td><td>API 34 (Android 14)</td></tr>
+<tr><td>Development OS</td><td>Windows, Mac, Linux</td></tr>
+<tr><td>Android NDK</td><td>r27c (as used by UE5.7)</td></tr>
+</table>
+
+<h2>Frequently Asked Questions</h2>
+<dl>
+<dt><strong>What engine version is supported?</strong></dt><dd>Unreal Engine 5.7, Android (arm64).</dd>
+<dt><strong>Does this work with Blueprint-only projects?</strong></dt><dd>Yes. No C++ required.</dd>
+<dt><strong>Plugin not visible in the Plugins list?</strong></dt><dd>Ensure the plugin folder is placed directly inside <code>Plugins/</code> (not nested inside a subfolder). Restart the editor after enabling.</dd>
+<dt><strong>Ads / features not working on device?</strong></dt><dd>1) Verify all credentials in <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong>. 2) Test on a real Android device — emulators are not supported. 3) Check Android <strong>logcat</strong> for SDK error messages.</dd>
+<dt><strong>Do I need a Chartboost account?</strong></dt><dd>Yes. Register at the Chartboost developer portal and obtain your App ID and any Zone / Placement IDs before ads will serve.</dd>
+<dt><strong>Which SDK version is included?</strong></dt><dd><strong>Chartboost Android SDK v9.7.0</strong>, pulled via Gradle dependency <code>com.chartboost:chartboost-sdk:9.7.0</code> at build time.</dd>
+<dt><strong>Does this plugin work on iOS?</strong></dt><dd>No. This plugin targets <strong>Android only</strong> (arm64).</dd>
+<dt><strong>Can I use multiple ad/feature plugins at the same time?</strong></dt><dd>Yes. Each plugin is fully independent and can be enabled alongside other plugins without conflict.</dd>
+<dt><strong>How do I get support?</strong></dt><dd>Contact the author via the <strong>Fab product page</strong>.</dd>
+</dl>
+
+<h2>Support & Notes</h2>
+<ul>
+  <li>Always test on a <strong>real Android device</strong>. Ad SDKs do not serve ads on emulators.</li>
+  <li>Check Android <strong>logcat</strong> for detailed SDK error messages during development.</li>
+  <li>Each ad plugin is independent and can be enabled alongside other plugins simultaneously.</li>
+  <li>For plugin issues, contact the author via the Fab product page.</li>
+</ul>
+
+<footer>
+  &copy; Alpha XP &mdash; <em>Alpha Ads - Chartboost Integration</em> v1.0 &mdash; Unreal Engine 5.7 &mdash; Android<br>
+  See <a href="../ThirdPartyNotices.md">ThirdPartyNotices.md</a> &bull; <a href="../README.md">README.md</a>
+</footer>
+
+</body>
+</html>

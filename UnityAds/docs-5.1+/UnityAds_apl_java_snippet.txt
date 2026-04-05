@@ -1,0 +1,72 @@
+// === Native method declarations (add to gameActivityClassAdditions) ===
+      public native void nativeUnityAdsAdsReady();
+      public native void nativeUnityAdsAdsFinish();
+      public native void nativeUnityAdsBannerLoaded();
+      public native void nativeUnityAdsBannerFailed(String error);
+      public native void nativeUnityAdsBannerClicked();
+      public native void nativeUnityAdsInterstitialLoaded();
+      public native void nativeUnityAdsInterstitialFailed(String error);
+      public native void nativeUnityAdsInterstitialShown();
+      public native void nativeUnityAdsInterstitialClosed();
+      public native void nativeUnityAdsInterstitialClicked();
+      public native void nativeUnityAdsNativeAdLoaded();
+      public native void nativeUnityAdsNativeAdFailed(String error);
+      public native void nativeUnityAdsAppOpenAdLoaded();
+      public native void nativeUnityAdsAppOpenAdFailed(String error);
+      public native void nativeUnityAdsAppOpenAdShown();
+      public native void nativeUnityAdsAppOpenAdClosed();
+      public native void nativeUnityAdsAdImpression(String error);
+
+// === Java method stubs (add to gameActivityClassAdditions) ===
+
+      // ---- Banner ----
+      public void AndroidThunkJava_UnityAds_LoadBanner() {
+        Log.debug("UnityAds: LoadBanner called (stub - implement with SDK banner API)");
+        nativeUnityAdsBannerLoaded();
+      }
+      public void AndroidThunkJava_UnityAds_ShowBanner() {
+        Log.debug("UnityAds: ShowBanner called");
+      }
+      public void AndroidThunkJava_UnityAds_HideBanner() {
+        Log.debug("UnityAds: HideBanner called");
+      }
+      public void AndroidThunkJava_UnityAds_DestroyBanner() {
+        Log.debug("UnityAds: DestroyBanner called");
+      }
+      public void AndroidThunkJava_UnityAds_SetBannerPosition(int position) {
+        Log.debug("UnityAds: SetBannerPosition " + position);
+      }
+
+      // ---- Interstitial ----
+      public void AndroidThunkJava_UnityAds_LoadInterstitial() {
+        Log.debug("UnityAds: LoadInterstitial called");
+        nativeUnityAdsInterstitialLoaded();
+      }
+      public void AndroidThunkJava_UnityAds_ShowInterstitial() {
+        Log.debug("UnityAds: ShowInterstitial called");
+        nativeUnityAdsInterstitialShown();
+        nativeUnityAdsInterstitialClosed();
+      }
+      public boolean AndroidThunkJava_UnityAds_IsInterstitialReady() {
+        return false;
+      }
+
+      // ---- Native Ad ----
+      public void AndroidThunkJava_UnityAds_LoadNativeAd() {
+        Log.debug("UnityAds: LoadNativeAd called");
+        nativeUnityAdsNativeAdFailed("Native ads not supported by this SDK version");
+      }
+
+      // ---- App Open Ad ----
+      public void AndroidThunkJava_UnityAds_LoadAppOpenAd() {
+        Log.debug("UnityAds: LoadAppOpenAd called");
+        nativeUnityAdsAppOpenAdFailed("App open ads not supported by this SDK version");
+      }
+      public void AndroidThunkJava_UnityAds_ShowAppOpenAd() {
+        Log.debug("UnityAds: ShowAppOpenAd called");
+      }
+      public boolean AndroidThunkJava_UnityAds_IsAppOpenAdReady() {
+        return false;
+      }
+
+      // ---- Ad Impression ----
