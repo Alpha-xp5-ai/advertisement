@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Ads Plugins - Documentation Hub</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:960px;margin:0 auto;padding:20px 24px;color:#1a1a1a;line-height:1.6}
+h1{color:#0d1117;border-bottom:4px solid #e94560;padding-bottom:12px;font-size:2em}
+h2{color:#0d1117;border-bottom:2px solid #e94560;padding-bottom:6px;margin-top:48px;font-size:1.4em}
+h3{color:#16213e;margin-top:28px;font-size:1.1em}
+code{background:#f0f0f0;padding:2px 7px;border-radius:4px;font-family:'SFMono-Regular',Consolas,monospace;font-size:.9em}
+.badge{display:inline-block;background:#e94560;color:#fff;padding:3px 12px;border-radius:14px;font-size:.82em;margin-right:6px;font-weight:600}
+.badge.green{background:#2ea44f}
+.badge.blue{background:#0969da}
+.badge.grey{background:#6e7681}
+.note{background:#fff8e1;border-left:5px solid #f9a825;padding:14px 18px;margin:20px 0;border-radius:0 8px 8px 0}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Plugin grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin:28px 0}
+.card{border:1px solid #ddd;border-radius:10px;overflow:hidden;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.card-header{background:#16213e;color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.card-header h3{margin:0;font-size:1.05em;color:#fff}
+.card-icon{width:36px;height:36px;border-radius:8px;background:#e94560;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1em;color:#fff;flex-shrink:0}
+.card-body{padding:16px 18px}
+.card-body p{margin:0 0 12px;font-size:.92em;color:#444}
+.version-row{display:flex;gap:10px;flex-wrap:wrap}
+.ver-btn{display:inline-block;padding:7px 16px;border-radius:6px;font-size:.85em;font-weight:600;border:2px solid #e94560;color:#e94560;transition:background .15s,color .15s}
+.ver-btn:hover{background:#e94560;color:#fff;text-decoration:none}
+.ver-btn.secondary{border-color:#0969da;color:#0969da}
+.ver-btn.secondary:hover{background:#0969da;color:#fff}
+.ver-btn.dim{border-color:#aaa;color:#888}
+.ver-btn.dim:hover{background:#aaa;color:#fff}
+
+/* Quick links table */
+table{border-collapse:collapse;width:100%;margin:16px 0}
+th{background:#16213e;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+td{border:1px solid #ddd;padding:9px 14px;font-size:.92em}
+tr:nth-child(even) td{background:#f9f9f9}
+td a{font-weight:600}
+
+footer{margin-top:72px;padding-top:20px;border-top:2px solid #eee;color:#888;font-size:.88em}
+</style>
+</head>
+<body>
+
+<h1>Alpha Ads Plugins &mdash; Documentation Hub</h1>
+<p>
+  <span class="badge">UE4 4.27</span>
+  <span class="badge blue">UE5.1+</span>
+  <span class="badge blue">Android</span>
+  <span class="badge blue">iOS</span>
+  <span class="badge green">Blueprint Ready</span>
+  <span class="badge grey">5 Plugins</span>
+</p>
+<p>
+  This is the central documentation index for all <strong>Alpha Ads</strong> Unreal Engine plugins.
+  Select a plugin below and choose your engine version to open its full documentation.
+</p>
+
+<div class="note">
+  <strong>Tip:</strong> Each plugin folder contains an <code>index.html</code> (full HTML docs) and a <code>README.md</code> (plain-text quick reference).
+  Use <code>docs-4.27</code> for Unreal Engine 4.27 projects and <code>docs-5.1+</code> / <code>Doc-5.1+</code> for UE5 projects.
+</div>
+
+
+<h2>Plugins</h2>
+
+<div class="grid">
+
+  <!-- AdColony -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">AC</div>
+      <h3>AdColony</h3>
+    </div>
+    <div class="card-body">
+      <p>Rewarded video, banner, interstitial, native &amp; app open ads via the AdColony (Digital Turbine) SDK.</p>
+      <div class="version-row">
+        <a class="ver-btn" href="AdColony/docs-4.27/index.html">UE4 4.27</a>
+        <a class="ver-btn secondary" href="AdColony/docs-5.1+/index.html">UE5.1+</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AppLovin -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">AL</div>
+      <h3>AppLovin</h3>
+    </div>
+    <div class="card-body">
+      <p>Rewarded, banner &amp; interstitial ads powered by the AppLovin MAX mediation SDK.</p>
+      <div class="version-row">
+        <a class="ver-btn" href="AppLovin/docs-4.27/index.html">UE4 4.27</a>
+        <a class="ver-btn secondary" href="AppLovin/Doc-5.1+/index.html">UE5.1+</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chartboost -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">CB</div>
+      <h3>Chartboost</h3>
+    </div>
+    <div class="card-body">
+      <p>Rewarded video &amp; interstitial ads via the Chartboost SDK for Android and iOS.</p>
+      <div class="version-row">
+        <a class="ver-btn" href="Chartboost/docs-4.27/index.html">UE4 4.27</a>
+        <a class="ver-btn secondary" href="Chartboost/docs-5.1+/index.html">UE5.1+</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UnityAds -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">UA</div>
+      <h3>Unity Ads</h3>
+    </div>
+    <div class="card-body">
+      <p>Rewarded video, interstitial &amp; banner ads via the Unity Ads SDK.</p>
+      <div class="version-row">
+        <a class="ver-btn" href="UnityAds/docs-4.27/index.html">UE4 4.27</a>
+        <a class="ver-btn secondary" href="UnityAds/docs-5.1+/index.html">UE5.1+</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vungle -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">VG</div>
+      <h3>Vungle (Liftoff)</h3>
+    </div>
+    <div class="card-body">
+      <p>Rewarded video, interstitial &amp; banner ads via the Vungle / Liftoff Monetize SDK.</p>
+      <div class="version-row">
+        <a class="ver-btn" href="Vungle/docs-4.27/index.html">UE4 4.27</a>
+        <a class="ver-btn secondary" href="Vungle/docs-5.1+/index.html">UE5.1+</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<h2>Quick Navigation</h2>
+<table>
+  <tr>
+    <th>Plugin</th>
+    <th>UE4 4.27 Docs</th>
+    <th>UE4 4.27 README</th>
+    <th>UE5.1+ Docs</th>
+    <th>UE5.1+ README</th>
+  </tr>
+  <tr>
+    <td><strong>AdColony</strong></td>
+    <td><a href="AdColony/docs-4.27/index.html">index.html</a></td>
+    <td><a href="AdColony/docs-4.27/README.md">README.md</a></td>
+    <td><a href="AdColony/docs-5.1+/index.html">index.html</a></td>
+    <td><a href="AdColony/docs-5.1+/README.md">README.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>AppLovin</strong></td>
+    <td><a href="AppLovin/docs-4.27/index.html">index.html</a></td>
+    <td><a href="AppLovin/docs-4.27/README.md">README.md</a></td>
+    <td><a href="AppLovin/Doc-5.1+/index.html">index.html</a></td>
+    <td><a href="AppLovin/Doc-5.1+/README.md">README.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>Chartboost</strong></td>
+    <td><a href="Chartboost/docs-4.27/index.html">index.html</a></td>
+    <td>&mdash;</td>
+    <td><a href="Chartboost/docs-5.1+/index.html">index.html</a></td>
+    <td><a href="Chartboost/docs-5.1+/README.md">README.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>Unity Ads</strong></td>
+    <td><a href="UnityAds/docs-4.27/index.html">index.html</a></td>
+    <td><a href="UnityAds/docs-4.27/README.md">README.md</a></td>
+    <td><a href="UnityAds/docs-5.1+/index.html">index.html</a></td>
+    <td>&mdash;</td>
+  </tr>
+  <tr>
+    <td><strong>Vungle</strong></td>
+    <td><a href="Vungle/docs-4.27/index.html">index.html</a></td>
+    <td><a href="Vungle/docs-4.27/README.md">README.md</a></td>
+    <td><a href="Vungle/docs-5.1+/index.html">index.html</a></td>
+    <td><a href="Vungle/docs-5.1+/README.md">README.md</a></td>
+  </tr>
+</table>
+
+
+<h2>Changelogs</h2>
+<table>
+  <tr><th>Plugin</th><th>UE4 4.27</th><th>UE5.1+</th></tr>
+  <tr>
+    <td><strong>AdColony</strong></td>
+    <td><a href="AdColony/docs-4.27/CHANGELOG.md">CHANGELOG.md</a></td>
+    <td><a href="AdColony/docs-5.1+/CHANGELOG.md">CHANGELOG.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>AppLovin</strong></td>
+    <td>&mdash;</td>
+    <td><a href="AppLovin/Doc-5.1+/CHANGELOG.md">CHANGELOG.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>Chartboost</strong></td>
+    <td>&mdash;</td>
+    <td><a href="Chartboost/docs-5.1+/CHANGELOG.md">CHANGELOG.md</a></td>
+  </tr>
+  <tr>
+    <td><strong>Unity Ads</strong></td>
+    <td><a href="UnityAds/docs-4.27/CHANGELOG.md">CHANGELOG.md</a></td>
+    <td>&mdash;</td>
+  </tr>
+  <tr>
+    <td><strong>Vungle</strong></td>
+    <td><a href="Vungle/docs-4.27/CHANGELOG.md">CHANGELOG.md</a></td>
+    <td><a href="Vungle/docs-5.1+/CHANGELOG.md">CHANGELOG.md</a></td>
+  </tr>
+</table>
+
+
+<footer>
+  &copy; Alpha XP 2026 &mdash; All Rights Reserved &mdash; Alpha Ads Plugins for Unreal Engine<br>
+  Documentation covers UE4 4.27 and UE5.1+ &bull; Platforms: Android (armv7 + arm64) &amp; iOS
+</footer>
+
+</body>
+</html>
