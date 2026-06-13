@@ -1,0 +1,18 @@
+# Third-Party Notices - Alpha Ads - Vungle Integration
+
+## Vungle Android SDK v4.0.2
+- Owner: Vungle Inc. (Liftoff)
+- License: Vungle Publisher SDK License
+- Website: https://vungle.com
+- Location: Source/ThirdParty/VungleSDK/VungleSDK.jar
+
+## Dagger v2.4
+- Owner: Google Inc.
+- License: Apache License 2.0
+- Location: Source/ThirdParty/VungleSDK/dagger-2.4.jar
+
+## javax.inject v1
+- License: Apache License 2.0
+- Location: Source/ThirdParty/VungleSDK/javax.inject-1.jar
+
+This plugin is not affiliated with Vungle Inc. or Liftoff.

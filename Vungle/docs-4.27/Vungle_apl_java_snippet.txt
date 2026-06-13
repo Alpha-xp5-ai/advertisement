@@ -1,0 +1,72 @@
+// === Native method declarations (add to gameActivityClassAdditions) ===
+      public native void nativeVungleAdsReady();
+      public native void nativeVungleAdsFinish();
+      public native void nativeVungleBannerLoaded();
+      public native void nativeVungleBannerFailed(String error);
+      public native void nativeVungleBannerClicked();
+      public native void nativeVungleInterstitialLoaded();
+      public native void nativeVungleInterstitialFailed(String error);
+      public native void nativeVungleInterstitialShown();
+      public native void nativeVungleInterstitialClosed();
+      public native void nativeVungleInterstitialClicked();
+      public native void nativeVungleNativeAdLoaded();
+      public native void nativeVungleNativeAdFailed(String error);
+      public native void nativeVungleAppOpenAdLoaded();
+      public native void nativeVungleAppOpenAdFailed(String error);
+      public native void nativeVungleAppOpenAdShown();
+      public native void nativeVungleAppOpenAdClosed();
+      public native void nativeVungleAdImpression(String error);
+
+// === Java method stubs (add to gameActivityClassAdditions) ===
+
+      // ---- Banner ----
+      public void AndroidThunkJava_Vungle_LoadBanner() {
+        Log.debug("Vungle: LoadBanner called (stub - implement with SDK banner API)");
+        nativeVungleBannerLoaded();
+      }
+      public void AndroidThunkJava_Vungle_ShowBanner() {
+        Log.debug("Vungle: ShowBanner called");
+      }
+      public void AndroidThunkJava_Vungle_HideBanner() {
+        Log.debug("Vungle: HideBanner called");
+      }
+      public void AndroidThunkJava_Vungle_DestroyBanner() {
+        Log.debug("Vungle: DestroyBanner called");
+      }
+      public void AndroidThunkJava_Vungle_SetBannerPosition(int position) {
+        Log.debug("Vungle: SetBannerPosition " + position);
+      }
+
+      // ---- Interstitial ----
+      public void AndroidThunkJava_Vungle_LoadInterstitial() {
+        Log.debug("Vungle: LoadInterstitial called");
+        nativeVungleInterstitialLoaded();
+      }
+      public void AndroidThunkJava_Vungle_ShowInterstitial() {
+        Log.debug("Vungle: ShowInterstitial called");
+        nativeVungleInterstitialShown();
+        nativeVungleInterstitialClosed();
+      }
+      public boolean AndroidThunkJava_Vungle_IsInterstitialReady() {
+        return false;
+      }
+
+      // ---- Native Ad ----
+      public void AndroidThunkJava_Vungle_LoadNativeAd() {
+        Log.debug("Vungle: LoadNativeAd called");
+        nativeVungleNativeAdFailed("Native ads not supported by this SDK version");
+      }
+
+      // ---- App Open Ad ----
+      public void AndroidThunkJava_Vungle_LoadAppOpenAd() {
+        Log.debug("Vungle: LoadAppOpenAd called");
+        nativeVungleAppOpenAdFailed("App open ads not supported by this SDK version");
+      }
+      public void AndroidThunkJava_Vungle_ShowAppOpenAd() {
+        Log.debug("Vungle: ShowAppOpenAd called");
+      }
+      public boolean AndroidThunkJava_Vungle_IsAppOpenAdReady() {
+        return false;
+      }
+
+      // ---- Ad Impression ----
