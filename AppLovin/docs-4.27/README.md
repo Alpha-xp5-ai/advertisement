@@ -2,6 +2,8 @@
 
 **Engine:** UE4 4.27 | **Platform:** Android | **Version:** 1.0 | **Author:** Alpha XP
 
+**Documentation:** https://alpha-xp5-ai.github.io/advertisement/AppLovin/
+
 ---
 
 ## Overview

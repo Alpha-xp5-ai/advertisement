@@ -8,7 +8,3 @@
 
 Use subject to the AppLovin terms of service.
 This plugin is not affiliated with AppLovin Corporation.
-
----
-
-**Documentation:** https://alpha-xp5-ai.github.io/advertisement/AppLovin/

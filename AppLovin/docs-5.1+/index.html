@@ -34,10 +34,10 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 <body>
 
 <h1>Alpha Ads - AppLovin Integration</h1>
-<p><span class='badge'>UE4 4.27</span><span class='badge'>UE5.7</span><span class='badge blue'>Android</span><span class='badge green'>Blueprint Ready</span><span class='badge'>v1.0</span></p>
+<p><span class='badge'>UE5.7</span><span class='badge blue'>Android</span><span class='badge green'>Blueprint Ready</span><span class='badge'>v1.0</span></p>
 
 <h2>Overview</h2>
-<p>Alpha Ads - AppLovin Integration is a Unreal Engine 4.27 and UE5.7 plugin that provides full Blueprint access to <strong>rewarded video, banner, interstitial, native, and app open ads</strong> on Android (armv7 + arm64).</p><p>The plugin acts as an integration bridge to the <strong>AppLovin Android SDK v6.3.2</strong> by AppLovin Corporation. No C++ knowledge is required to use this plugin.</p>
+<p>Alpha Ads - AppLovin Integration is an Unreal Engine 5.7 plugin that provides full Blueprint access to <strong>rewarded video, banner, interstitial, native, and app open ads</strong> on Android (arm64).</p><p>The plugin acts as an integration bridge to the <strong>AppLovin MAX Android SDK v12.6.1</strong> by AppLovin Corporation, delivered via Gradle/Maven. No C++ knowledge is required to use this plugin.</p>
 
 
 <h2>Screenshots</h2>
@@ -75,23 +75,29 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 <tr><td>Number of C++ Classes</td><td>5</td></tr>
 <tr><td>Network Replicated</td><td>No</td></tr>
 <tr><td>Supported Development Platforms</td><td>Windows: Yes &nbsp; Mac: Yes &nbsp; Linux: Yes</td></tr>
-<tr><td>Supported Target Build Platforms</td><td>Android (armv7 + arm64)</td></tr>
+<tr><td>Supported Target Build Platforms</td><td>Android (arm64)</td></tr>
 <tr><td>Documentation Link</td><td>See this page and README.md included in the plugin folder</td></tr>
 <tr><td>Example Project</td><td>Contact the author via the Fab product page</td></tr>
 <tr><td>Important Notes</td><td>Requires a real Android device for testing. Emulators are not supported by ad SDKs.</td></tr>
 </table>
 
 
+<h2>SDK Upgrade History</h2>
+<table>
+<tr><th>Plugin</th><th>Previous SDK</th><th>Current SDK</th><th>Delivery</th></tr>
+<tr><td>AppLovin</td><td>v6.3.2 (.jar)</td><td>v12.6.1 (MAX)</td><td>Gradle/Maven</td></tr>
+</table>
+
 <h2>Third-Party SDK</h2>
 <table>
 <tr><th>Field</th><th>Value</th></tr>
-<tr><td>SDK Name</td><td>AppLovin Android SDK v6.3.2</td></tr>
+<tr><td>SDK Name</td><td>AppLovin MAX Android SDK v12.6.1</td></tr>
 <tr><td>Provider</td><td>AppLovin Corporation</td></tr>
 <tr><td>License</td><td>AppLovin SDK License Agreement</td></tr>
-<tr><td>SDK File Location</td><td><code>Source/ThirdParty/AppLovinSDK/AppLovinSDK.jar</code></td></tr>
+<tr><td>SDK Delivery</td><td>Gradle dependency: <code>com.applovin:applovin-sdk:12.6.1</code></td></tr>
 </table>
 <div class="note">
-  This plugin bundles the precompiled <strong>AppLovin SDK v6.3.2</strong>. You must independently accept the AppLovin terms of service and register your own account and App ID at the vendor website before ads will serve.
+  This plugin pulls the <strong>AppLovin MAX SDK v12.6.1</strong> via Gradle at build time. You must independently accept the AppLovin terms of service and register your own account and SDK Key / Ad Unit IDs at the AppLovin dashboard before ads will serve.
 </div>
 
 
@@ -159,23 +165,23 @@ Show Rewarded Video</code></pre>
 <h2>Requirements</h2>
 <table>
 <tr><th>Requirement</th><th>Value</th></tr>
-<tr><td>Unreal Engine Version</td><td>4.27</td></tr>
-<tr><td>Target Platform</td><td>Android (armv7 + arm64)</td></tr>
-<tr><td>Min Android SDK</td><td>API 28 (Android 9)</td></tr>
-<tr><td>Target Android SDK</td><td>API 30 (Android 11)</td></tr>
+<tr><td>Unreal Engine Version</td><td>5.7</td></tr>
+<tr><td>Target Platform</td><td>Android (arm64)</td></tr>
+<tr><td>Min Android SDK</td><td>API 26 (Android 8)</td></tr>
+<tr><td>Target Android SDK</td><td>API 34 (Android 14)</td></tr>
 <tr><td>Development OS</td><td>Windows, Mac, Linux</td></tr>
-<tr><td>Android NDK</td><td>r21e (as used by UE4 4.27)</td></tr>
+<tr><td>Android NDK</td><td>r27c (as used by UE5.7)</td></tr>
 </table>
 
 <h2>Frequently Asked Questions</h2>
 <dl>
-<dt><strong>What engine version is supported?</strong></dt><dd>Unreal Engine 4.27, Android (armv7 + arm64).</dd>
+<dt><strong>What engine version is supported?</strong></dt><dd>Unreal Engine 5.7, Android (arm64).</dd>
 <dt><strong>Does this work with Blueprint-only projects?</strong></dt><dd>Yes. No C++ required.</dd>
 <dt><strong>Plugin not visible in the Plugins list?</strong></dt><dd>Ensure the plugin folder is placed directly inside <code>Plugins/</code> (not nested inside a subfolder). Restart the editor after enabling.</dd>
 <dt><strong>Ads / features not working on device?</strong></dt><dd>1) Verify all credentials in <strong>Edit &gt; Project Settings &gt; Alpha Ads - AppLovin Integration</strong>. 2) Test on a real Android device — emulators are not supported. 3) Check Android <strong>logcat</strong> for SDK error messages.</dd>
 <dt><strong>Do I need a AppLovin account?</strong></dt><dd>Yes. Register at the AppLovin developer portal and obtain your App ID and any Zone / Placement IDs before ads will serve.</dd>
-<dt><strong>Which SDK version is included?</strong></dt><dd><strong>AppLovin Android SDK v6.3.2</strong>. Located at <code>Source/ThirdParty/AppLovinSDK/AppLovinSDK.jar</code> inside the plugin folder.</dd>
-<dt><strong>Does this plugin work on iOS?</strong></dt><dd>No. This plugin targets <strong>Android only</strong> (armv7 + arm64).</dd>
+<dt><strong>Which SDK version is included?</strong></dt><dd><strong>AppLovin MAX Android SDK v12.6.1</strong>, pulled via Gradle dependency <code>com.applovin:applovin-sdk:12.6.1</code> at build time.</dd>
+<dt><strong>Does this plugin work on iOS?</strong></dt><dd>No. This plugin targets <strong>Android only</strong> (arm64).</dd>
 <dt><strong>Can I use multiple ad/feature plugins at the same time?</strong></dt><dd>Yes. Each plugin is fully independent and can be enabled alongside other plugins without conflict.</dd>
 <dt><strong>How do I get support?</strong></dt><dd>Contact the author via the <strong>Fab product page</strong>.</dd>
 </dl>
@@ -189,7 +195,7 @@ Show Rewarded Video</code></pre>
 </ul>
 
 <footer>
-  &copy; Alpha XP &mdash; <em>Alpha Ads - AppLovin Integration</em> v1.0 &mdash; Unreal Engine 4.27 &mdash; Android<br>
+  &copy; Alpha XP &mdash; <em>Alpha Ads - AppLovin Integration</em> v1.0 &mdash; Unreal Engine 5.7 &mdash; Android<br>
   See <a href="ThirdPartyNotices.md">ThirdPartyNotices.md</a> &bull; <a href="README.md">README.md</a>
 </footer>
 

@@ -1,0 +1,64 @@
+THIRD PARTY SOFTWARE DECLARATION FORM
+======================================
+
+SELLER NAME:               Alpha XP
+SUBMITTED PLUGIN TITLE:    Alpha Ads - AppLovin Integration (UE 5.1+)
+
+Does your submitted plugin use Third Party Software of any kind?
+    YES
+
+How many different sources of Third Party Software does your plugin use?
+    1
+
+------------------------------------------------------------
+SOFTWARE #1
+------------------------------------------------------------
+
+NAME & VERSION:
+    AppLovin SDK v6.3.2
+
+SOFTWARE URL:
+    https://www.applovin.com
+    Dashboard: https://dash.applovin.com
+
+COPY OF LICENSE:
+    See ThirdPartyNotices.txt (bundled with plugin) for the full
+    AppLovin SDK License text. Summary: royalty-free use by app
+    publishers under the AppLovin Terms of Use; SDK redistribution
+    as a standalone library is prohibited; required attribution
+    included.
+
+WHAT DOES THIS SOFTWARE DO?
+    The AppLovin SDK delivers mobile advertising on Android. It
+    requests, caches, and renders Banner, Interstitial, Rewarded
+    Video, Native, and App Open ad formats from the AppLovin /
+    AppLovin Exchange ad network, and reports impression / click /
+    reward callbacks back to the host application.
+
+WHY DOES YOUR PLUGIN NEED IT?
+    The plugin is a UE Blueprint wrapper around the AppLovin SDK.
+    Without the SDK, the plugin cannot request or display any ads.
+    The SDK is the only component that communicates with AppLovin
+    ad servers and renders ad views inside the Android Activity;
+    the plugin only exposes its API to Blueprints.
+
+IS THE LIBRARY STATICALLY OR DYNAMICALLY LINKED?
+    Dynamically linked. The SDK ships as an Android .aar/.jar
+    inside Source/ThirdParty/AppLovinSDK/ and is loaded at runtime
+    by the Android ART runtime via the application classpath. It
+    is NOT statically linked into the UE .so binaries.
+
+WILL THIS SOFTWARE SEND DATA BACK TO THE CREATOR?
+    YES. The AppLovin SDK transmits data to AppLovin servers,
+    including:
+        - Anonymous device advertising identifier (Android AAID),
+          subject to user consent
+        - Device model, OS version, locale, network type
+        - Ad request, impression, click, completion, and reward
+          events
+        - SDK crash and diagnostic telemetry
+    Data collection is governed by the AppLovin Privacy Policy:
+        https://www.applovin.com/privacy/
+    The plugin exposes a Blueprint consent API (GDPR / CCPA /
+    COPPA) so the host application can gate or disable this data
+    collection on a per-user basis.

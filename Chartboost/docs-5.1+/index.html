@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpha Ads - AppLovin Integration | Documentation</title>
+<title>Alpha Ads - Chartboost Integration | Documentation</title>
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:960px;margin:0 auto;padding:20px 24px;color:#1a1a1a;line-height:1.6}
 h1{color:#0d1117;border-bottom:4px solid #e94560;padding-bottom:12px;font-size:2em}
@@ -33,11 +33,11 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 </head>
 <body>
 
-<h1>Alpha Ads - AppLovin Integration</h1>
-<p><span class='badge'>UE4 4.27</span><span class='badge'>UE5.7</span><span class='badge blue'>Android</span><span class='badge green'>Blueprint Ready</span><span class='badge'>v1.0</span></p>
+<h1>Alpha Ads - Chartboost Integration</h1>
+<p><span class='badge'>UE5.7</span><span class='badge blue'>Android</span><span class='badge green'>Blueprint Ready</span><span class='badge'>v1.0</span></p>
 
 <h2>Overview</h2>
-<p>Alpha Ads - AppLovin Integration is a Unreal Engine 4.27 and UE5.7 plugin that provides full Blueprint access to <strong>rewarded video, banner, interstitial, native, and app open ads</strong> on Android (armv7 + arm64).</p><p>The plugin acts as an integration bridge to the <strong>AppLovin Android SDK v6.3.2</strong> by AppLovin Corporation. No C++ knowledge is required to use this plugin.</p>
+<p>Alpha Ads - Chartboost Integration is an Unreal Engine 5.7 plugin that provides full Blueprint access to <strong>rewarded video, banner, interstitial, native, and app open ads</strong> on Android (arm64).</p><p>The plugin acts as an integration bridge to the <strong>Chartboost Android SDK v9.7.0</strong> by Chartboost Inc., delivered via Gradle/Maven. No C++ knowledge is required to use this plugin.</p>
 
 
 <h2>Screenshots</h2>
@@ -55,51 +55,57 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 
 <h2>Features</h2>
 <ul>
-  <li>Rewarded Video ads with adReceived, failedToReceive, completed, and hidden callbacks</li>
-  <li>Banner Ads with top/bottom position control, show, hide, and destroy support</li>
-  <li>Interstitial Ads with loaded, failed, shown, closed, and clicked event callbacks</li>
-  <li>Native Ad support with loaded and failed callbacks</li>
-  <li>App Open Ad support with full lifecycle events</li>
-  <li>Ad Impression tracking delegate for all ad types</li>
+  <li>Rewarded Video with Location parameter, cached, failed-to-load, closed, and completed callbacks</li>
+  <li>Completed Rewarded Video callback delivers Location string and Reward integer</li>
+  <li>Banner Ads with position control, show, hide, and destroy</li>
+  <li>Interstitial Ads with loaded, failed, shown, closed, and clicked callbacks</li>
+  <li>Native Ad loading with loaded and failed callbacks</li>
+  <li>App Open Ads with full lifecycle events</li>
+  <li>Ad Impression tracking delegate</li>
   <li>Game Instance Subsystem for global access</li>
-  <li>Blueprint Function Library for direct ad calls</li>
-  <li>Actor Component for per-Actor event delegation</li>
+  <li>Blueprint Function Library and Actor Component</li>
 </ul>
 
 <h2>Technical Details</h2>
 <p>Use the table below when completing the <strong>Technical Details</strong> section on the Fab product submission page.</p>
 <table class='tech-table'>
 <tr><td>Features</td><td>See Features section above</td></tr>
-<tr><td>Code Modules</td><td>AppLovin (Runtime)</td></tr>
+<tr><td>Code Modules</td><td>Chartboost (Runtime)</td></tr>
 <tr><td>Number of Blueprints</td><td>26</td></tr>
 <tr><td>Number of C++ Classes</td><td>5</td></tr>
 <tr><td>Network Replicated</td><td>No</td></tr>
 <tr><td>Supported Development Platforms</td><td>Windows: Yes &nbsp; Mac: Yes &nbsp; Linux: Yes</td></tr>
-<tr><td>Supported Target Build Platforms</td><td>Android (armv7 + arm64)</td></tr>
+<tr><td>Supported Target Build Platforms</td><td>Android (arm64)</td></tr>
 <tr><td>Documentation Link</td><td>See this page and README.md included in the plugin folder</td></tr>
 <tr><td>Example Project</td><td>Contact the author via the Fab product page</td></tr>
 <tr><td>Important Notes</td><td>Requires a real Android device for testing. Emulators are not supported by ad SDKs.</td></tr>
 </table>
 
 
+<h2>SDK Upgrade History</h2>
+<table>
+<tr><th>Plugin</th><th>Previous SDK</th><th>Current SDK</th><th>Delivery</th></tr>
+<tr><td>Chartboost</td><td>v6.6.0 (.jar)</td><td>v9.7.0</td><td>Gradle/Maven</td></tr>
+</table>
+
 <h2>Third-Party SDK</h2>
 <table>
 <tr><th>Field</th><th>Value</th></tr>
-<tr><td>SDK Name</td><td>AppLovin Android SDK v6.3.2</td></tr>
-<tr><td>Provider</td><td>AppLovin Corporation</td></tr>
-<tr><td>License</td><td>AppLovin SDK License Agreement</td></tr>
-<tr><td>SDK File Location</td><td><code>Source/ThirdParty/AppLovinSDK/AppLovinSDK.jar</code></td></tr>
+<tr><td>SDK Name</td><td>Chartboost Android SDK v9.7.0</td></tr>
+<tr><td>Provider</td><td>Chartboost Inc.</td></tr>
+<tr><td>License</td><td>Chartboost SDK License Agreement</td></tr>
+<tr><td>SDK Delivery</td><td>Gradle dependency: <code>com.chartboost:chartboost-sdk:9.7.0</code></td></tr>
 </table>
 <div class="note">
-  This plugin bundles the precompiled <strong>AppLovin SDK v6.3.2</strong>. You must independently accept the AppLovin terms of service and register your own account and App ID at the vendor website before ads will serve.
+  This plugin pulls the <strong>Chartboost SDK v9.7.0</strong> via Gradle at build time. You must independently accept the Chartboost terms of service and register your own account and App ID at the vendor website before ads will serve.
 </div>
 
 
 <h2>Setup Guide</h2>
 
 <div class="step"><span class="step-num">1</span><strong>Copy the plugin</strong> — Place the plugin folder inside your project's <code>Plugins/</code> directory.</div>
-<div class="step"><span class="step-num">2</span><strong>Enable the plugin</strong> — Open the editor, go to <strong>Edit &gt; Plugins</strong>, search for <em>Alpha Ads - AppLovin Integration</em>, and enable it. Restart the editor.</div>
-<div class="step"><span class="step-num">3</span><strong>Configure credentials</strong> — Go to <strong>Edit &gt; Project Settings &gt; Alpha Ads - AppLovin Integration</strong> and enter your SDK App ID and Zone/Placement IDs.</div>
+<div class="step"><span class="step-num">2</span><strong>Enable the plugin</strong> — Open the editor, go to <strong>Edit &gt; Plugins</strong>, search for <em>Alpha Ads - Chartboost Integration</em>, and enable it. Restart the editor.</div>
+<div class="step"><span class="step-num">3</span><strong>Configure credentials</strong> — Go to <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong> and enter your SDK App ID and Zone/Placement IDs.</div>
 <div class="step"><span class="step-num">4</span><strong>Package for Android</strong> — Build the project and package it for Android Shipping.</div>
 
 
@@ -110,7 +116,7 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 <h3>Accessing the Plugin (Subsystem)</h3>
 <p>This plugin provides a <strong>Game Instance Subsystem</strong> for easy global access. Get it from any Blueprint:</p>
 <pre><code>Get Game Instance
-  → Get AppLovin Subsystem
+  → Get Chartboost Subsystem
   → [call any function]</code></pre>
 <div class="note">The Subsystem is automatically initialized when the game starts. You do not need to create it manually.</div>
 
@@ -119,13 +125,13 @@ dl{margin:0}dt{font-weight:600;margin-top:18px;color:#0d1117}dd{margin:4px 0 0 0
 <h3>Rewarded Video / Primary Feature - Step by Step</h3>
 <pre><code>Event BeginPlay
   ↓
-Get AppLovin Subsystem
+Get Chartboost Subsystem
   ↓
-Bind Event to On Ad Received
+Bind Event to On Cached Rewarded Video
   ↓
-Preload Rewarded Video
+Cache Rewarded Video
 
-─── On On Ad Received ─────────────────────
+─── On On Cached Rewarded Video ─────────────────────
   ↓
 Show Rewarded Video</code></pre>
 
@@ -135,23 +141,23 @@ Show Rewarded Video</code></pre>
 <p>Bind to these events <strong>before</strong> calling load/show functions:</p>
 <table>
 <tr><th>Event</th><th>When it fires</th></tr>
-<tr><td><code>On Ad Received</code></td><td>Ad/content successfully loaded and ready to show</td></tr>
-<tr><td><code>On Failed To Receive Ad</code></td><td>Load or show failed (String parameter contains error info)</td></tr>
+<tr><td><code>On Cached Rewarded Video</code></td><td>Ad/content successfully loaded and ready to show</td></tr>
+<tr><td><code>On Failed To Load Rewarded Video</code></td><td>Load or show failed (String parameter contains error info)</td></tr>
 </table>
 <div class="warn"><strong>Important:</strong> Always bind your events <em>before</em> calling Load or Show functions, or you may miss callbacks.</div>
 
 
 <h3>Additional Blueprint Calls</h3><table><tr><th>Node</th><th>Description</th></tr>
-<tr><td><code>Load Banner</code></td><td>Load Banner Ad</td></tr>
-<tr><td><code>Show Banner</code></td><td>Show Banner (Top or Bottom)</td></tr>
-<tr><td><code>Load Interstitial</code></td><td>Load Interstitial Ad</td></tr>
+<tr><td><code>Load Banner</code></td><td>Load and cache Banner Ad</td></tr>
+<tr><td><code>Show Banner</code></td><td>Show Banner at position</td></tr>
+<tr><td><code>Load Interstitial</code></td><td>Cache Interstitial Ad</td></tr>
 <tr><td><code>Show Interstitial</code></td><td>Show Interstitial Ad</td></tr>
 </table>
 
 <h3>Project Settings</h3>
-<p>All SDK credentials are configured in <strong>Edit &gt; Project Settings &gt; Alpha Ads - AppLovin Integration</strong>. Fill in the following fields before packaging:</p>
+<p>All SDK credentials are configured in <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong>. Fill in the following fields before packaging:</p>
 <ul>
-  <li><strong>App ID / SDK Key</strong> — Your application identifier from the AppLovin dashboard.</li>
+  <li><strong>App ID / SDK Key</strong> — Your application identifier from the Chartboost dashboard.</li>
   <li><strong>Zone ID / Placement ID</strong> — The specific ad zone or placement for each ad format.</li>
 </ul>
 <div class="note">All Project Settings fields are read at app startup and injected into the Android manifest automatically by the plugin's UPL (Unreal Plugin Language) XML file.</div>
@@ -159,23 +165,23 @@ Show Rewarded Video</code></pre>
 <h2>Requirements</h2>
 <table>
 <tr><th>Requirement</th><th>Value</th></tr>
-<tr><td>Unreal Engine Version</td><td>4.27</td></tr>
-<tr><td>Target Platform</td><td>Android (armv7 + arm64)</td></tr>
-<tr><td>Min Android SDK</td><td>API 28 (Android 9)</td></tr>
-<tr><td>Target Android SDK</td><td>API 30 (Android 11)</td></tr>
+<tr><td>Unreal Engine Version</td><td>5.7</td></tr>
+<tr><td>Target Platform</td><td>Android (arm64)</td></tr>
+<tr><td>Min Android SDK</td><td>API 26 (Android 8)</td></tr>
+<tr><td>Target Android SDK</td><td>API 34 (Android 14)</td></tr>
 <tr><td>Development OS</td><td>Windows, Mac, Linux</td></tr>
-<tr><td>Android NDK</td><td>r21e (as used by UE4 4.27)</td></tr>
+<tr><td>Android NDK</td><td>r27c (as used by UE5.7)</td></tr>
 </table>
 
 <h2>Frequently Asked Questions</h2>
 <dl>
-<dt><strong>What engine version is supported?</strong></dt><dd>Unreal Engine 4.27, Android (armv7 + arm64).</dd>
+<dt><strong>What engine version is supported?</strong></dt><dd>Unreal Engine 5.7, Android (arm64).</dd>
 <dt><strong>Does this work with Blueprint-only projects?</strong></dt><dd>Yes. No C++ required.</dd>
 <dt><strong>Plugin not visible in the Plugins list?</strong></dt><dd>Ensure the plugin folder is placed directly inside <code>Plugins/</code> (not nested inside a subfolder). Restart the editor after enabling.</dd>
-<dt><strong>Ads / features not working on device?</strong></dt><dd>1) Verify all credentials in <strong>Edit &gt; Project Settings &gt; Alpha Ads - AppLovin Integration</strong>. 2) Test on a real Android device — emulators are not supported. 3) Check Android <strong>logcat</strong> for SDK error messages.</dd>
-<dt><strong>Do I need a AppLovin account?</strong></dt><dd>Yes. Register at the AppLovin developer portal and obtain your App ID and any Zone / Placement IDs before ads will serve.</dd>
-<dt><strong>Which SDK version is included?</strong></dt><dd><strong>AppLovin Android SDK v6.3.2</strong>. Located at <code>Source/ThirdParty/AppLovinSDK/AppLovinSDK.jar</code> inside the plugin folder.</dd>
-<dt><strong>Does this plugin work on iOS?</strong></dt><dd>No. This plugin targets <strong>Android only</strong> (armv7 + arm64).</dd>
+<dt><strong>Ads / features not working on device?</strong></dt><dd>1) Verify all credentials in <strong>Edit &gt; Project Settings &gt; Alpha Ads - Chartboost Integration</strong>. 2) Test on a real Android device — emulators are not supported. 3) Check Android <strong>logcat</strong> for SDK error messages.</dd>
+<dt><strong>Do I need a Chartboost account?</strong></dt><dd>Yes. Register at the Chartboost developer portal and obtain your App ID and any Zone / Placement IDs before ads will serve.</dd>
+<dt><strong>Which SDK version is included?</strong></dt><dd><strong>Chartboost Android SDK v9.7.0</strong>, pulled via Gradle dependency <code>com.chartboost:chartboost-sdk:9.7.0</code> at build time.</dd>
+<dt><strong>Does this plugin work on iOS?</strong></dt><dd>No. This plugin targets <strong>Android only</strong> (arm64).</dd>
 <dt><strong>Can I use multiple ad/feature plugins at the same time?</strong></dt><dd>Yes. Each plugin is fully independent and can be enabled alongside other plugins without conflict.</dd>
 <dt><strong>How do I get support?</strong></dt><dd>Contact the author via the <strong>Fab product page</strong>.</dd>
 </dl>
@@ -189,7 +195,7 @@ Show Rewarded Video</code></pre>
 </ul>
 
 <footer>
-  &copy; Alpha XP &mdash; <em>Alpha Ads - AppLovin Integration</em> v1.0 &mdash; Unreal Engine 4.27 &mdash; Android<br>
+  &copy; Alpha XP &mdash; <em>Alpha Ads - Chartboost Integration</em> v1.0 &mdash; Unreal Engine 5.7 &mdash; Android<br>
   See <a href="ThirdPartyNotices.md">ThirdPartyNotices.md</a> &bull; <a href="README.md">README.md</a>
 </footer>
 

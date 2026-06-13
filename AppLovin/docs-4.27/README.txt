@@ -1,18 +1,16 @@
-# Alpha Ads - Unity Ads Integration
+# Alpha Ads - AppLovin Integration
 
 **Engine:** UE4 4.27 | **Platform:** Android | **Version:** 1.0 | **Author:** Alpha XP
-
-**Documentation:** https://alpha-xp5-ai.github.io/advertisement/UnityAds/
 
 ---
 
 ## Overview
 
-Alpha Ads - Unity Ads Integration exposes rewarded video, banner, interstitial ads to UE4 Blueprint projects on Android. No C++ required.
+Alpha Ads - AppLovin Integration exposes rewarded video, banner, interstitial, native, app open ads to UE4 Blueprint projects on Android. No C++ required.
 
 ## Features
 
-- Banner, Interstitial, and Rewarded Video ad formats
+- Banner, Interstitial, Rewarded Video, Native, and App Open ad formats
 - Full Blueprint API — no C++ required
 - Event delegates for all ad lifecycle callbacks (Loaded, Failed, Shown, Clicked, Closed, Rewarded)
 - Game Instance Subsystem access from any Blueprint
@@ -20,20 +18,20 @@ Alpha Ads - Unity Ads Integration exposes rewarded video, banner, interstitial a
 - Test mode toggle for development builds
 - Bundled SDK — zero external download or setup
 - Android armv7 + arm64 support
-- Project Settings panel for credentials (Game ID, Placement IDs)
+- Project Settings panel for credentials (SDK Key, Ad Unit IDs)
 - UE 4.27 compatible
 
 ## Third-Party SDK
 
 | Field | Value |
 |---|---|
-| SDK | Unity Ads v2.0.5 |
-| Provider | Unity Technologies |
-| License | Unity Ads SDK Terms |
-| File | `Source/ThirdParty/UnityAdsSDK/UnityAdsSDK.jar` |
-| Site | https://unityads.unity3d.com |
+| SDK | AppLovin v6.3.2 |
+| Provider | AppLovin Corporation |
+| License | AppLovin SDK License |
+| File | `Source/ThirdParty/AppLovinSDK/AppLovinSDK.jar` |
+| Site | https://www.applovin.com |
 
-> You must independently agree to the Unity Ads terms and set up your own account.
+> You must independently agree to the AppLovin terms and set up your own account.
 
 ---
 
@@ -41,7 +39,7 @@ Alpha Ads - Unity Ads Integration exposes rewarded video, banner, interstitial a
 
 1. Copy plugin to your project Plugins/ directory.
 2. Enable in Edit > Plugins.
-3. Enter credentials in Edit > Project Settings > Alpha Ads - Unity Ads Integration.
+3. Enter credentials in Edit > Project Settings > Alpha Ads - AppLovin Integration.
 4. Rebuild and package Android Shipping.
 
 ---
@@ -52,7 +50,7 @@ A minimal demo project is included with the plugin download under `/ExampleProje
 
 - A sample Level (`L_AdsDemo`) with UMG buttons for each ad format
 - A demo Blueprint (`BP_AdsManager`) showing init, load, show, and event-binding flow
-- Pre-configured Project Settings using Unity Ads test Game ID / Placement IDs
+- Pre-configured Project Settings using AppLovin test SDK Key / Ad Unit IDs
 - Ready-to-package Android Shipping config (armv7 + arm64)
 
 Open `ExampleProject/AdsDemo.uproject` in UE 4.27, enable the plugin, and Launch on an Android device to verify integration.

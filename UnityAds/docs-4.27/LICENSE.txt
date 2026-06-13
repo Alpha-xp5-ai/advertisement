@@ -1,0 +1,65 @@
+THIRD PARTY SOFTWARE DECLARATION FORM
+======================================
+
+SELLER NAME:               Alpha XP
+SUBMITTED PLUGIN TITLE:    Alpha Ads - Unity Ads Integration (UE4 4.27)
+
+Does your submitted plugin use Third Party Software of any kind?
+    YES
+
+How many different sources of Third Party Software does your plugin use?
+    1
+
+------------------------------------------------------------
+SOFTWARE #1
+------------------------------------------------------------
+
+NAME & VERSION:
+    Unity Ads SDK v2.0.5
+
+SOFTWARE URL:
+    https://unityads.unity3d.com
+    Dashboard: https://dashboard.unity3d.com
+
+COPY OF LICENSE:
+    See ThirdPartyNotices.txt (bundled with plugin) for the full
+    Unity Ads SDK Terms text. Summary: royalty-free use by app
+    publishers under the Unity Software Additional Terms; SDK
+    redistribution as a standalone library is prohibited;
+    required attribution included.
+
+WHAT DOES THIS SOFTWARE DO?
+    The Unity Ads SDK delivers mobile advertising on Android. It
+    requests, caches, and renders Banner, Interstitial, and
+    Rewarded Video ad formats from the Unity Ads network, and
+    reports impression / click / reward callbacks back to the
+    host application.
+
+WHY DOES YOUR PLUGIN NEED IT?
+    The plugin is a UE4 Blueprint wrapper around the Unity Ads
+    SDK. Without the SDK, the plugin cannot request or display
+    any ads. The SDK is the only component that communicates with
+    Unity Ads servers and renders ad views inside the Android
+    Activity; the plugin only exposes its API to Blueprints.
+
+IS THE LIBRARY STATICALLY OR DYNAMICALLY LINKED?
+    Dynamically linked. The SDK ships as an Android .aar/.jar
+    inside Source/ThirdParty/UnityAdsSDK/ and is loaded at
+    runtime by the Android ART runtime via the application
+    classpath. It is NOT statically linked into the UE4 .so
+    binaries.
+
+WILL THIS SOFTWARE SEND DATA BACK TO THE CREATOR?
+    YES. The Unity Ads SDK transmits data to Unity Technologies
+    servers, including:
+        - Anonymous device advertising identifier (Android AAID),
+          subject to user consent
+        - Device model, OS version, locale, network type
+        - Ad request, impression, click, completion, and reward
+          events
+        - SDK crash and diagnostic telemetry
+    Data collection is governed by the Unity Privacy Policy:
+        https://unity.com/legal/privacy-policy
+    The plugin exposes a Blueprint consent API (GDPR / CCPA /
+    COPPA) so the host application can gate or disable this data
+    collection on a per-user basis.
