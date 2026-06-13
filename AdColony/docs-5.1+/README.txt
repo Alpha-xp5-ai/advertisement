@@ -2,8 +2,6 @@
 
 **Engine:** UE4 4.27 | **Platform:** Android | **Version:** 1.0 | **Author:** Alpha XP
 
-**Documentation:** https://alpha-xp5-ai.github.io/advertisement/AdColony/
-
 ---
 
 ## Overview
@@ -21,7 +19,7 @@ Alpha Ads - AdColony Integration exposes rewarded video, banner, interstitial, n
 - Bundled SDK — zero external download or setup
 - Android armv7 + arm64 support
 - Project Settings panel for credentials (App ID, Zone IDs)
-- UE 4.27 compatible
+- UE 5.1+ compatible
 
 ## Third-Party SDK
 
@@ -55,7 +53,7 @@ A minimal demo project is included with the plugin download under `/ExampleProje
 - Pre-configured Project Settings using AdColony test App ID / Zone IDs
 - Ready-to-package Android Shipping config (armv7 + arm64)
 
-Open `ExampleProject/AdsDemo.uproject` in UE 4.27, enable the plugin, and Launch on an Android device to verify integration.
+Open `ExampleProject/AdsDemo.uproject` in UE 5.1+, enable the plugin, and Launch on an Android device to verify integration.
 
 ---
 

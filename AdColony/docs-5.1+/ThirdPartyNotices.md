@@ -8,3 +8,7 @@
 
 Use subject to the AdColony terms of service.
 This plugin is not affiliated with Digital Turbine.
+
+---
+
+**Documentation:** https://alpha-xp5-ai.github.io/advertisement/AdColony/
